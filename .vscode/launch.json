@@ -5,6 +5,12 @@
             "name": "debug milligram example",
             "request": "launch",
             "url": "http://127.0.0.1:3000/node_modules/milligram/example.html"
+        },
+        {
+            "type": "chrome",
+            "name": "debug webroot",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/src/web_root/index.html"
         }
     ]
 }
