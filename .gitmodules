@@ -1,6 +1,3 @@
-[submodule "git_sub_modules/Skeleton"]
-	path = git_sub_modules/Skeleton
-	url = https://github.com/dhg/Skeleton.git
 [submodule "git_sub_modules/pure"]
 	path = git_sub_modules/pure
 	url = https://github.com/pure-css/pure.git

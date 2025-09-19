@@ -7,9 +7,7 @@
     <link rel="preconnect" href="https://s3.shawxu.net" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
-    -->
+
     <!-- 标准 favicon -->
     <link rel="icon" type="image/x-icon" href="https://s3.shawxu.net/images/favicons/xx-v1/favicon.ico">
     <!-- iOS 和 Android 设备的高分辨率图标 -->
@@ -24,17 +22,42 @@
 
     <title>X.X.</title>
     <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="../../git_sub_modules/Skeleton/css/skeleton.css">
+    <!-- <link rel="stylesheet" href="../../git_sub_modules/Skeleton/css/skeleton.css"> -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200..900&display=swap');
 
         body {
-            font-family: 'Noto Serif SC', serif;
+            font-family: 'Noto Sans SC', Helvetica, Arial, sans-serif;
             font-weight: normal;
         }
     </style>
 </head>
 <body>
-    <h1>你好，World!</h1>
+    <header class="container">
+        <h1>你好，World!</h1>
+        <nav>
+            <a href="#">首页</a> |
+            <a href="#">关于</a> |
+            <a href="#">联系</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section>
+            <h2>欢迎来到我的网站</h2>
+            <p>这是一个使用 HTML5 和 CSS3 构建的基本网页结构示例。</p>
+        </section>
+        <section>
+            <h2>特色</h2>
+            <ul>
+                <li>响应式设计</li>
+                <li>现代布局</li>
+                <li>易于扩展</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="container">
+        <p>&copy; 2024 我的公司. 保留所有权利.</p>
+    </footer>
 </body>
 </html>
