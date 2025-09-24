@@ -1,7 +1,1 @@
-{
-  "dependencies": {
-    "bulma": "^1.0.4",
-    "materialize-css": "^1.0.0-rc.2",
-    "milligram": "^1.4.1"
-  }
-}
+{"devDependencies":{"bulma":"^1.0.4","materialize-css":"^1.0.0","milligram":"^1.4.1"}}
