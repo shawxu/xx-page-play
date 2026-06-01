@@ -35,26 +35,21 @@
       overflow-x: hidden;
     }
 
-    /* ── Orbs ── */
     .orb {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.3;
+      position: fixed; border-radius: 50%;
+      filter: blur(80px); opacity: 0.3;
       animation: float 12s ease-in-out infinite;
-      pointer-events: none;
-      z-index: 0;
+      pointer-events: none; z-index: 0;
     }
     .orb-1 { width: 500px; height: 500px; background: var(--accent); top: -150px; left: -100px; animation-delay: 0s; }
     .orb-2 { width: 400px; height: 400px; background: var(--accent2); top: 30%; right: -120px; animation-delay: -4s; animation-duration: 15s; }
     .orb-3 { width: 350px; height: 350px; background: var(--accent3); bottom: -100px; left: 30%; animation-delay: -8s; animation-duration: 18s; }
     @keyframes float {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(40px, -60px) scale(1.05); }
-      66% { transform: translate(-30px, 40px) scale(0.95); }
+      0%, 100% { transform: translate(0,0) scale(1); }
+      33% { transform: translate(40px,-60px) scale(1.05); }
+      66% { transform: translate(-30px,40px) scale(0.95); }
     }
 
-    /* ── Grid ── */
     .grid {
       position: fixed; inset: 0;
       background-image: linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
@@ -63,31 +58,26 @@
       z-index: 0; pointer-events: none;
     }
 
-    /* ── Noise ── */
     .noise {
       position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
       pointer-events: none; z-index: 0;
     }
 
-    /* ── Cursor glow ── */
     #cursor-glow {
       position: fixed; width: 320px; height: 320px; border-radius: 50%;
       background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
-      pointer-events: none; transform: translate(-50%, -50%); z-index: 0;
+      pointer-events: none; transform: translate(-50%,-50%); z-index: 0;
     }
 
-    /* ── Main ── */
     main {
       position: relative; z-index: 1;
       display: flex; flex-direction: column; align-items: center;
-      min-height: 100vh; padding: 4rem 2rem; gap: 0;
+      min-height: 100vh; padding: 4rem 2rem;
     }
 
-    /* ── Hero ── */
-    .hero {
-      text-align: center; max-width: 800px;
-    }
+    .hero { text-align: center; max-width: 800px; }
+
     .hero-label {
       display: inline-block; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--accent); background: rgba(99,102,241,0.1);
@@ -95,6 +85,7 @@
       border-radius: 999px; margin-bottom: 2rem;
       animation: fadeUp 0.8s ease both;
     }
+
     .hero-title {
       font-size: clamp(3rem, 10vw, 7rem); font-weight: 800; line-height: 1;
       letter-spacing: -0.03em;
@@ -103,12 +94,14 @@
       background-clip: text;
       animation: fadeUp 0.8s 0.1s ease both;
     }
+
     .hero-sub {
       font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--muted);
       margin-top: 1.5rem; line-height: 1.7;
       animation: fadeUp 0.8s 0.2s ease both;
     }
     .hero-sub em { color: var(--text); font-style: normal; }
+
     .tags {
       display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
       margin-top: 3rem; animation: fadeUp 0.8s 0.3s ease both;
@@ -118,6 +111,7 @@
       background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
       color: var(--muted); letter-spacing: 0.05em;
     }
+
     .line {
       width: 60px; height: 2px;
       background: linear-gradient(90deg, var(--accent), var(--accent3));
@@ -125,17 +119,12 @@
       animation: growX 1s 0.5s ease both;
     }
 
-    /* ── Section ── */
-    .section-wrap {
-      width: 100%; max-width: 900px;
-      animation: fadeUp 0.8s 0.6s ease both;
-    }
+    .section-wrap { width: 100%; max-width: 900px; animation: fadeUp 0.8s 0.6s ease both; }
     .section-title {
       font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 1rem;
+      color: var(--muted); margin-bottom: 1rem; font-style: italic;
     }
 
-    /* ── Stats row ── */
     .stats {
       display: flex; gap: 3rem; justify-content: center;
       margin-bottom: 4rem;
@@ -152,11 +141,9 @@
       text-transform: uppercase; letter-spacing: 0.1em;
     }
 
-    /* ── Preact widget card ── */
     .widget {
       background: var(--bg-card); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 2rem;
-      backdrop-filter: blur(12px);
     }
     .widget + .widget { margin-top: 1.5rem; }
     .widget-title {
@@ -165,7 +152,6 @@
     }
     .widget-title span { font-size: 1.2rem; }
 
-    /* ── Tabs ── */
     .tabs-nav {
       display: flex; gap: 4px; margin-bottom: 1.5rem;
       background: rgba(255,255,255,0.04); padding: 4px;
@@ -174,30 +160,22 @@
     .tab-btn {
       flex: 1; padding: 0.5em 1em; border-radius: 8px;
       border: none; background: transparent; color: var(--muted);
-      font-family: inherit; font-size: 0.8rem; cursor: pointer;
-      transition: all 0.2s;
+      font-family: inherit; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
     }
-    .tab-btn.active {
-      background: rgba(99,102,241,0.2); color: var(--text);
-    }
+    .tab-btn.active { background: rgba(99,102,241,0.2); color: var(--text); }
     .tab-content {
       background: rgba(99,102,241,0.05); border: 1px solid var(--border);
       border-radius: 10px; padding: 1.5rem; font-size: 0.85rem;
       color: var(--muted); line-height: 1.8;
-      animation: fadeIn 0.3s ease;
     }
     .tab-content strong { color: var(--text); }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* ── Todo ── */
-    .todo-input-row {
-      display: flex; gap: 8px; margin-bottom: 1rem;
-    }
+    .todo-input-row { display: flex; gap: 8px; margin-bottom: 1rem; }
     .todo-input {
       flex: 1; padding: 0.6em 1em; border-radius: 8px;
       background: rgba(255,255,255,0.06); border: 1px solid var(--border);
-      color: var(--text); font-family: inherit; font-size: 0.85rem;
-      outline: none; transition: border-color 0.2s;
+      color: var(--text); font-family: inherit; font-size: 0.85rem; outline: none;
+      transition: border-color 0.2s;
     }
     .todo-input:focus { border-color: var(--accent); }
     .todo-input::placeholder { color: var(--muted); }
@@ -205,8 +183,7 @@
       padding: 0.6em 1.2em; border-radius: 8px; border: none;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       color: #fff; font-family: inherit; font-size: 0.85rem;
-      cursor: pointer; font-weight: 600;
-      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: pointer; font-weight: 600; transition: transform 0.15s, box-shadow 0.15s;
       box-shadow: 0 0 20px rgba(99,102,241,0.25);
     }
     .todo-add-btn:hover { transform: translateY(-1px); box-shadow: 0 0 30px rgba(99,102,241,0.4); }
@@ -226,16 +203,9 @@
       border-radius: 4px; transition: color 0.2s, background 0.2s;
     }
     .todo-del:hover { color: #ef4444; background: rgba(239,68,68,0.1); }
-    .todo-empty {
-      text-align: center; padding: 2rem; color: var(--muted);
-      font-size: 0.8rem;
-    }
+    .todo-empty { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.8rem; }
 
-    /* ── Counter widget ── */
-    .counter-row {
-      display: flex; align-items: center; justify-content: center;
-      gap: 1.5rem;
-    }
+    .counter-row { display: flex; align-items: center; justify-content: center; gap: 1.5rem; }
     .counter-btn {
       width: 44px; height: 44px; border-radius: 10px;
       border: 1px solid var(--border); background: rgba(255,255,255,0.04);
@@ -259,7 +229,6 @@
     }
     .counter-step-btn:hover { color: var(--text); background: rgba(255,255,255,0.08); }
 
-    /* ── CTA ── */
     .cta { margin-top: 4rem; animation: fadeUp 0.8s 0.8s ease both; }
     .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
     .btn {
@@ -275,7 +244,6 @@
     .btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.15); box-shadow: none; }
     .btn-outline:hover { background: rgba(255,255,255,0.05); box-shadow: none; }
 
-    /* ── Animations ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
@@ -285,11 +253,9 @@
       to { transform: scaleX(1); }
     }
 
-    /* ── Scroll reveal ── */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── Preact app root ── */
     #app { width: 100%; }
   </style>
 </head>
@@ -302,7 +268,6 @@
   <div class="noise"></div>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <span class="hero-label">⚡ Static &middot; Preact &middot; Zero Deps</span>
       <h1 class="hero-title">xx-page-play</h1>
@@ -322,10 +287,8 @@
 
     <div class="line"></div>
 
-    <!-- Preact app mount point -->
     <div id="app"></div>
 
-    <!-- CTA -->
     <div class="cta">
       <div class="btn-group">
         <a href="https://github.com/shawxu/xx-page-play" class="btn" target="_blank">
@@ -345,15 +308,37 @@
     function Tabs() {
       const [active, setActive] = useState(0);
       const tabs = [
-        { label: '⚡ 性能', content: <div>依赖体积 <strong>仅 3KB</strong>，比 React 小 7 倍。ESM CDN 直出，浏览器原生模块解析，无打包、无压缩、零混淆。</div> },
-        { label: '🎯 精准', content: <div>与 React 完全兼容的 API，支持 hooks、context、Suspense。使用标准 <strong>Web Components</strong> 自定义元素方式输出，可嵌入任意页面。</div> },
-        { label: '🔥 灵活', content: <div>可与 jQuery、Vue、原生 DOM 并存。渐进式增强，不强求全有全无。一个 <strong>import</strong> 引入，立即获得完整的响应式能力。</div> },
+        {
+          label: '⚡ 性能',
+          content: [
+            h('strong', null, '仅 3KB'),
+            ' 依赖体积，比 React 小 7 倍。ESM CDN 直出，浏览器原生模块解析，无打包、无压缩、零混淆。'
+          ]
+        },
+        {
+          label: '🎯 精准',
+          content: [
+            '与 React 完全兼容的 API，支持 hooks、context、Suspense。使用标准 ',
+            h('strong', null, 'Web Components'),
+            ' 自定义元素方式输出，可嵌入任意页面。'
+          ]
+        },
+        {
+          label: '🔥 灵活',
+          content: [
+            '可与 jQuery、Vue、原生 DOM 并存。渐进式增强，不强求全有全无。一个 ',
+            h('strong', null, 'import'),
+            ' 引入，立即获得完整的响应式能力。'
+          ]
+        },
       ];
       return h('div', { class: 'widget' },
-        h('div', { class: 'widget-title' }, h('span', null, '�签'), ' Preact 特性'),
+        h('div', { class: 'widget-title' },
+          h('span', null, '🏷'), ' Preact 特性'
+        ),
         h('div', { class: 'tabs-nav' },
           tabs.map((t, i) => h('button', {
-            class: `tab-btn${i === active ? ' active' : ''}`,
+            class: 'tab-btn' + (i === active ? ' active' : ''),
             onClick: () => setActive(i),
             key: i
           }, t.label))
@@ -367,7 +352,9 @@
       const [count, setCount] = useState(0);
       const steps = [-100, -10, -1, 1, 10, 100];
       return h('div', { class: 'widget' },
-        h('div', { class: 'widget-title' }, h('span', null, '⚙️'), ' 数字调节器'),
+        h('div', { class: 'widget-title' },
+          h('span', null, '⚙️'), ' 数字调节器'
+        ),
         h('div', { class: 'counter-row' },
           h('button', { class: 'counter-btn', onClick: () => setCount(c => c - 1) }, '−'),
           h('div', { class: 'counter-display' }, count),
@@ -376,12 +363,12 @@
         h('div', { class: 'counter-btns-row' },
           steps.map(n => h('button', {
             class: 'counter-step-btn', onClick: () => setCount(c => c + n), key: n
-          }, n > 0 ? `+${n}` : n))
+          }, n > 0 ? '+' + n : n))
         )
       );
     }
 
-    // ── Todo ─────────────────────────────────────────────────────────────────
+    // ── Todo ────────────────────────────────────────────────────────────────
     function Todo() {
       const [items, setItems] = useState([
         { id: 1, text: '尝试 Preact 交互组件', done: false },
@@ -395,11 +382,13 @@
         setItems(it => [...it, { id: Date.now(), text: val.trim(), done: false }]);
         setVal('');
       };
-      const toggle = id => setItems(it => it.map(i => i.id === id ? { ...i, done: !i.done } : i));
+      const toggle = id => setItems(it => it.map(i => i.id === id ? Object.assign({}, i, { done: !i.done }) : i));
       const del = id => setItems(it => it.filter(i => i.id !== id));
 
       return h('div', { class: 'widget' },
-        h('div', { class: 'widget-title' }, h('span', null, '📋'), ' 待办事项'),
+        h('div', { class: 'widget-title' },
+          h('span', null, '📋'), ' 待办事项'
+        ),
         h('div', { class: 'todo-input-row' },
           h('input', {
             class: 'todo-input', value: val,
@@ -411,7 +400,7 @@
         ),
         h('ul', { class: 'todo-list' },
           items.length === 0 && h('li', { class: 'todo-empty' }, '暂无任务，全部完成了？🎉'),
-          items.map(item => h('li', { class: `todo-item${item.done ? ' done' : ''}`, key: item.id },
+          items.map(item => h('li', { class: 'todo-item' + (item.done ? ' done' : ''), key: item.id },
             h('span', { class: 'todo-item-text', onClick: () => toggle(item.id) }, item.text),
             h('button', { class: 'todo-del', onClick: () => del(item.id) }, '✕')
           ))
@@ -419,7 +408,7 @@
       );
     }
 
-    // ── App ─────────────────────────────────────────────────────────────────
+    // ── App ───────────────────────────────────────────────────────────────────
     function App() {
       const [visible, setVisible] = useState(false);
       useEffect(() => {
@@ -430,7 +419,7 @@
         return () => obs.disconnect();
       }, []);
 
-      return h('div', { class: `section-wrap${visible ? '' : ' reveal'}` },
+      return h('div', { class: 'section-wrap' + (visible ? '' : ' reveal') },
         h('div', { class: 'section-title' }, '// Interactive Preact Components'),
         h(Tabs),
         h(Counter),
@@ -442,14 +431,12 @@
   </script>
 
   <script>
-    // Cursor glow
     const glow = document.getElementById('cursor-glow');
     document.addEventListener('mousemove', e => {
       glow.style.left = e.clientX + 'px';
       glow.style.top = e.clientY + 'px';
     });
 
-    // Scroll reveal for non-Preact sections
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => e.isIntersecting && (e.target.classList.add('visible'), obs.unobserve(e.target)));
     }, { threshold: 0.1 });
